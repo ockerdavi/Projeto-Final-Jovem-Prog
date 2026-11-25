@@ -1,0 +1,120 @@
+/* 1. Reset e Fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #090d16; /* Fundo escuro profundo */
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    display: flex;
+    flex-direction: column; /* Garante que cabeçalho, cenário e botões fiquem um abaixo do outro */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 2. Container Visual (Agrupando os 3 blocos no centro com largura fixa) */
+header, #tela-cenario, #tela-botoes {
+    width: 100%;
+    max-width: 720px; /* Largura ideal de leitura no monitor */
+}
+
+/* 3. Cabeçalho Estilo Painel Tático */
+header {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    border-top: 4px solid #38bdf8; /* Linha de destaque azul neon no topo */
+    border-radius: 8px 8px 0 0;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#status-progresso {
+    font-size: 0.85rem;
+    background-color: #1e293b;
+    color: #4ade80; /* Verde terminal */
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid #334155;
+}
+
+/* 4. Caixa Principal do Cenário */
+#tela-cenario {
+    background-color: #0f172a;
+    border-left: 1px solid #1e293b;
+    border-right: 1px solid #1e293b;
+    padding: 30px 25px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 5. Campo de Input (Login do Operador) */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #090d16;
+    border: 1px solid #38bdf8;
+    color: #4ade80;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 4px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* 6. Área Inferior dos Botões */
+#tela-botoes {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar do fundo */
+}
+
+/* 7. Botões Interativos */
+button {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    border-left: 4px solid #38bdf8; /* Detalhe tático na esquerda do botão */
+    padding: 14px 18px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #38bdf8;
+    color: #090d16;
+    font-weight: bold;
+    transform: translateX(4px); /* Leve movimento para a direita ao passar o mouse */
+}
